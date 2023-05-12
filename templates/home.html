@@ -11,7 +11,7 @@
     <form action="/madlib">
         {%for prompt in prompts%}
             <div>
-                {{prompt}}:
+                {{prompt.replace('_', ' ').capitalize()}}:
                 <input name="{{prompt}}">
             </div>
         {%endfor%}
